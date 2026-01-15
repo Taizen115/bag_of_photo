@@ -1,0 +1,3 @@
+//テキスト
+
+const MainFont = "MainFont";

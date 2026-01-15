@@ -1,0 +1,61 @@
+{
+  "item": "もちもの",
+  "bagList": "バッグ一覧",
+  "makeBag": "バッグ作成",
+
+  "deleteSelected": "選択消去",
+  "deleteAll": "全消去",
+  "done": "完了",
+  "deleteSentence1": "選択したもちものを消去しますか？",
+  "deleteSentence2": "もちものを全部消去しますか？",
+  "deleteSentence3": "選択したバッグを消去しますか？",
+  "deleteSentence4": "バッグを全部消去しますか?",
+  "deleteSentence5": "全消去しました",
+  "deleteSentence6": "選択消去しました",
+  "deleteSentence7": "選択したバッグを消去しますか？",
+
+  "checkSentence1": "バッグの登録には、「バッグの名前」「もちもの」両方の入力が必要です。\nこのまま戻ると、このバッグは登録されませんがよろしいですか。",
+  "checkSentence2": "「バッグの名前」あるいは「もちもの」のいずれかが削除されました。\nこのまま戻ると、このバッグが削除されますがよろしいですか。",
+  "checkSentence3": "登録を続ける",
+  "checkSentence4": "編集を続ける",
+  "checkSentence5": "このまま戻る",
+  "register": "←登録",
+  "bagNameInput": "バッグの名前を入力して下さい",
+  "preparedItem": "用意済みのもちもの",
+  "reset": "リセット",
+  "noItem": "もちものはありません",
+  "unpreparedItem": "まだ用意していないもちもの",
+  "selection": "選択",
+
+  "resetSentence1": "用意する前の状態にしていいですか？",
+  "resetSentence2": "「用意済みのもちもの」を\n「まだ用意していないもちもの」へ\n移動しますか？",
+  "resetSentence3": "用意する前の状態にしました",
+
+  "warming": "注意",
+  "warmingSentence": "もちものはピン留めされたもちもの以外は、全てまだ用意していないもちものになります",
+  "cancel": "キャンセル",
+  "ok": "実行",
+
+  "selectItem": "もちもの選択",
+  "addNew": "新規追加",
+
+  "itemList": "全体のもちもの",
+  "addNewItem": "新規もちもの追加",
+
+  "itemAdd": "もちもの追加",
+  "selectImage": "画像を選択する",
+  "camera": "カメラ",
+  "gallery":"ギャラリー",
+  "itemName": "もちもの名",
+  "tenWord": "10文字まで",
+  "addItemToList": "もちものを登録する",
+  "finishAdd": "登録が完了しました",
+
+  "itemEdit": "もちものの編集",
+  "itemChange": "もちものを変更する",
+  "itemDelete0": "もちものを消去する",
+  "itemDelete1": "消去しますか？",
+  "itemDelete2": "消去しました",
+
+  "selectColor": "テーマカラーを選ぶ"
+}

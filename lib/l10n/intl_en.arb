@@ -1,0 +1,61 @@
+{
+  "item": "Items",
+  "bagList": "Bag List",
+  "makeBag": "Make My Bag",
+
+  "deleteSelected": "Delete Selected",
+  "deleteAll": "Delete All",
+  "done": "Done",
+  "deleteSentence1": "Do you delete the selected items?",
+  "deleteSentence2": "Do you delete all items？",
+  "deleteSentence3": "Do you delete the selected bags?",
+  "deleteSentence4": "Do you delete all bags?",
+  "deleteSentence5": "All Deleted",
+  "deleteSentence6": "Selection Deleted",
+  "deleteSentence7": "Do you delete the selected bags?",
+
+  "checkSentence1": "A bag name and items are required. If you go back now, this bag won’t be saved. Continue?",
+  "checkSentence2": "The bag name or items were removed. If you go back now, this bag will be deleted. Continue?",
+  "checkSentence3": "Continue",
+  "checkSentence4": "Continue",
+  "checkSentence5": "Go Back",
+  "register": "←Register",
+  "bagNameInput": "Enter bag name.",
+  "preparedItem": "Prepared Items",
+  "reset": "Reset",
+  "noItem": "No Items",
+  "unpreparedItem": "Unprepared Items",
+  "selection": "Selection",
+
+  "resetSentence1": "Do you reset items？",
+  "resetSentence2": "Do you reset prepared items \n to unprepared items？",
+  "resetSentence3": "Reset Items",
+
+  "warming": "Warning",
+  "warmingSentence": "All items except pinned ones are treated as unprepared.",
+  "cancel": "Cancel",
+  "ok": "OK",
+
+  "selectItem": "Selected",
+  "addNew": "Add Items",
+
+  "itemList": "Items List",
+  "addNewItem": "Add Items",
+
+  "itemAdd": "Add Items",
+  "selectImage": "Select Images",
+  "camera": "Camera",
+  "gallery":"Gallery",
+  "itemName": "Name of Items",
+  "tenWord": "Maximum 10 characters.",
+  "addItemToList": "Add items to list",
+  "finishAdd": "Your registration is complete.",
+
+  "itemEdit": "Edit Items",
+  "itemChange": "Change Items",
+  "itemDelete0": "Delete Items",
+  "itemDelete1": "Do you delete Items?",
+  "itemDelete2": "Items are deleted.",
+
+  "selectColor": "Select Theme Color"
+}
