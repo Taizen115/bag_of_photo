@@ -48,7 +48,7 @@ void main() async {
      value: themeProvider),
       ],
       child: DevicePreview(
-          enabled: false,
+          enabled: true,
           builder: (context) => MyApp(),
       )
     ),

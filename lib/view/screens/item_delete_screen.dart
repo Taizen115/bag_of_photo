@@ -55,12 +55,12 @@ class _ItemDeleteScreenState extends State<ItemDeleteScreen> {
               },
               child: Text(
                 "☓",
-                style: TextStyle(color: Colors.black, fontSize: 25),
+                style: TextStyle(color: Colors.white70, fontSize: 25),
               )),
           title: Text(
             //選択消去
             S.of(context)!.deleteSelected,
-            style: TextStyle(color: Colors.black),
+            style: TextStyle(color: Colors.white70),
           ),
           centerTitle: true,
           actions: [
@@ -69,7 +69,7 @@ class _ItemDeleteScreenState extends State<ItemDeleteScreen> {
                   deleteItem();
                 },
                 //完了
-                child: Text(S.of(context)!.done))
+                child: Text(S.of(context)!.done, style: TextStyle(color: Colors.white70, fontSize: 20.0),))
           ],
         ),
         body: Column(
@@ -115,8 +115,8 @@ class _ItemDeleteScreenState extends State<ItemDeleteScreen> {
         actions: [
           TextButton(
             style: TextButton.styleFrom(
-              backgroundColor: Colors.lightBlue,
-              foregroundColor: Colors.white,
+              backgroundColor: Theme.of(context).colorScheme.primary,
+              foregroundColor: Colors.white70,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20.0),
               ),
