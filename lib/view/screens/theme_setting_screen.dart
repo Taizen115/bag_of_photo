@@ -8,11 +8,15 @@ class ThemeSettingScreen extends StatelessWidget {
   ThemeSettingScreen({super.key});
 
   final List<Color> _colors = [
+    Colors.green,
     Colors.lightGreen,
+    Colors.teal,
+    Colors.blue,
     Colors.lightBlue,
-    Colors.redAccent,
-    Colors.orangeAccent,
-    Colors.brown,
+    Colors.indigo,
+    Colors.red,
+    Colors.orange,
+    Colors.pink,
     Colors.purple,
   ];
 
