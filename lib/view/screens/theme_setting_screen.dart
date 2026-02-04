@@ -15,7 +15,6 @@ class ThemeSettingScreen extends StatelessWidget {
     Colors.lightBlue,
     Colors.indigo,
     Colors.red,
-    Colors.orange,
     Colors.pink,
     Colors.purple,
   ];
