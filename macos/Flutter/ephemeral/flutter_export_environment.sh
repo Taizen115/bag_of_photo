@@ -1,7 +1,7 @@
 #!/bin/sh
 # This is a generated file; do not edit or check into version control.
 export "FLUTTER_ROOT=/Users/apple/Documents/taizen/flutter"
-export "FLUTTER_APPLICATION_PATH=/Users/apple/Documents/taizen/FlutterProject/scb_06na"
+export "FLUTTER_APPLICATION_PATH=/Users/apple/Documents/taizen/FlutterProject/bag_of_photo"
 export "COCOAPODS_PARALLEL_CODE_SIGN=true"
 export "FLUTTER_BUILD_DIR=build"
 export "FLUTTER_BUILD_NAME=2.0.0"
