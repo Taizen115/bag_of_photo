@@ -46,7 +46,7 @@ class _ItemMasterScreenState extends State<ItemMasterScreen> {
           child: TextButton(
             child: Text(
               //新規もちもの追加
-              S.of(context)!.addNewItem,
+              S.of(context).addNewItem,
               style: TextStyle(fontSize: 20.0),
             ),
             onPressed: () => _itemPlus(),
@@ -62,7 +62,7 @@ class _ItemMasterScreenState extends State<ItemMasterScreen> {
               icon: FaIcon(FontAwesomeIcons.arrowLeft)),
           title: Text(
             //全体のもちもの
-            S.of(context)!.itemList,
+            S.of(context).itemList,
             style: TextStyle(fontSize: 20.0, color: Colors.white70),
           ),
           elevation: 2,
@@ -86,12 +86,12 @@ class _ItemMasterScreenState extends State<ItemMasterScreen> {
                   PopupMenuItem<DeleteType>(
                     value: DeleteType.Select,
                     //選択消去
-                    child: Text(S.of(context)!.deleteSelected),
+                    child: Text(S.of(context).deleteSelected),
                   ),
                   PopupMenuItem<DeleteType>(
                     value: DeleteType.All,
                     //全消去
-                    child: Text(S.of(context)!.deleteAll),
+                    child: Text(S.of(context).deleteAll),
                   ),
                 ],
               ),
@@ -148,10 +148,10 @@ class _ItemMasterScreenState extends State<ItemMasterScreen> {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20.0),
         ),
-        title: Text(S.of(context)!.deleteAll),
+        title: Text(S.of(context).deleteAll),
         content: Text(
           //登録している持ち物を全部消しますか？
-          S.of(context)!.deleteSentence2,
+          S.of(context).deleteSentence2,
           style: TextStyle(color: Colors.black87),
         ),
         actions: [
@@ -163,20 +163,20 @@ class _ItemMasterScreenState extends State<ItemMasterScreen> {
                 borderRadius: BorderRadius.circular(20.0),
               ),
             ),
-            child: Text(S.of(context)!.cancel),
+            child: Text(S.of(context).cancel),
             onPressed: () => Navigator.pop(context),
           ),
           TextButton(
             style: TextButton.styleFrom(
               foregroundColor: Colors.black87,
             ),
-            child: Text(S.of(context)!.ok),
+            child: Text(S.of(context).ok),
             onPressed: () async {
               await viewModel.deleteAllItem();
               await viewModel.getAllItem();
               Fluttertoast.showToast(
                 //全消去しました
-                msg: S.of(context)!.deleteSentence5,
+                msg: S.of(context).deleteSentence5,
                 toastLength: Toast.LENGTH_LONG,
               );
               Navigator.pop(context);

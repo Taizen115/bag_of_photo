@@ -59,7 +59,7 @@ class _ItemDeleteScreenState extends State<ItemDeleteScreen> {
               )),
           title: Text(
             //選択消去
-            S.of(context)!.deleteSelected,
+            S.of(context).deleteSelected,
             style: TextStyle(color: Colors.white70),
           ),
           centerTitle: true,
@@ -69,7 +69,7 @@ class _ItemDeleteScreenState extends State<ItemDeleteScreen> {
                   deleteItem();
                 },
                 //完了
-                child: Text(S.of(context)!.done, style: TextStyle(color: Colors.white70, fontSize: 20.0),))
+                child: Text(S.of(context).done, style: TextStyle(color: Colors.white70, fontSize: 20.0),))
           ],
         ),
         body: Column(
@@ -111,7 +111,7 @@ class _ItemDeleteScreenState extends State<ItemDeleteScreen> {
           borderRadius: BorderRadius.circular(20.0),
         ),
         //選択した持ち物を消去しますか？
-        title: Text(S.of(context)!.deleteSentence1),
+        title: Text(S.of(context).deleteSentence1),
         actions: [
           TextButton(
             style: TextButton.styleFrom(
@@ -121,14 +121,14 @@ class _ItemDeleteScreenState extends State<ItemDeleteScreen> {
                 borderRadius: BorderRadius.circular(20.0),
               ),
             ),
-            child: Text(S.of(context)!.cancel),
+            child: Text(S.of(context).cancel),
             onPressed: () => Navigator.pop(context),
           ),
           TextButton(
             style: TextButton.styleFrom(
               foregroundColor: Colors.black87,
             ),
-            child: Text(S.of(context)!.ok),
+            child: Text(S.of(context).ok),
             onPressed: () async {
               await viewModel.deleteSelectedItem();
               // await viewModel.deleteItem();
@@ -137,7 +137,7 @@ class _ItemDeleteScreenState extends State<ItemDeleteScreen> {
               Navigator.pop(context);
               Fluttertoast.showToast(
                 //選択消去しました
-                msg: S.of(context)!.deleteSentence6,
+                msg: S.of(context).deleteSentence6,
                 toastLength: Toast.LENGTH_LONG,
               );
             },

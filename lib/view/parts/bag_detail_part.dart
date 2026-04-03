@@ -67,7 +67,7 @@ class _BagDetailPartState extends State<BagDetailPart> {
                   ),
                 ),
                 child: Text(
-                  S.of(context)!.register,
+                  S.of(context).register,
                   style: const TextStyle(fontSize: 10.0),
                 ),
               ),
@@ -81,7 +81,7 @@ class _BagDetailPartState extends State<BagDetailPart> {
             decoration: InputDecoration(
               contentPadding: EdgeInsets.symmetric(vertical: 2.0),
               //バッグの名前を入力してください
-              hintText: S.of(context)?.bagNameInput,
+              hintText: S.of(context).bagNameInput,
               hintStyle: const TextStyle(
                 color: Colors.white70,
               ),
@@ -115,7 +115,7 @@ class _BagDetailPartState extends State<BagDetailPart> {
                 Expanded(
                   child: Text(
                     //まだ用意していないもちもの
-                    S.of(context)!.unpreparedItem,
+                    S.of(context).unpreparedItem,
                     style: TextStyle(fontSize: 18.0),
                   ),
                 ),
@@ -133,10 +133,10 @@ class _BagDetailPartState extends State<BagDetailPart> {
                     onPressed: () {
                       showConfirmDialog(
                         context: context,
-                        title: S.of(context)!.warming,
-                        content: S.of(context)?.warmingSentence,
-                        okLabel: S.of(context)!.ok,
-                        cancelLabel: S.of(context)!.cancel,
+                        title: S.of(context).warming,
+                        content: S.of(context).warmingSentence,
+                        okLabel: S.of(context).ok,
+                        cancelLabel: S.of(context).cancel,
                         okStyle: TextButton.styleFrom(
                             foregroundColor: Theme.of(context).colorScheme.primary,),
                         cancelStyle: TextButton.styleFrom(
@@ -153,7 +153,7 @@ class _BagDetailPartState extends State<BagDetailPart> {
                     },
                     child: Text(
                       //選択
-                      S.of(context)!.selection,
+                      S.of(context).selection,
                       style: TextStyle(fontSize: 15.0, color: Theme.of(context).colorScheme.primary,),
                     ),
                   ),
@@ -178,7 +178,7 @@ class _BagDetailPartState extends State<BagDetailPart> {
                 Expanded(
                   child: Text(
                     //用意済みのもちもの
-                    S.of(context)!.preparedItem,
+                    S.of(context).preparedItem,
                     style: TextStyle(fontSize: 18.0),
                   ),
                 ),
@@ -195,21 +195,21 @@ class _BagDetailPartState extends State<BagDetailPart> {
                       final viewModel = context.read<ViewModel>();
                       showConfirmDialog(
                         context: context,
-                        title: S.of(context)!.resetSentence1,
-                        content: S.of(context)?.resetSentence2,
-                        okLabel: S.of(context)!.ok,
-                        cancelLabel: S.of(context)!.cancel,
+                        title: S.of(context).resetSentence1,
+                        content: S.of(context).resetSentence2,
+                        okLabel: S.of(context).ok,
+                        cancelLabel: S.of(context).cancel,
                         onOk: () async {
                           await viewModel.resetItem();
                           Fluttertoast.showToast(
-                            msg: S.of(context)!.resetSentence3,
+                            msg: S.of(context).resetSentence3,
                             toastLength: Toast.LENGTH_LONG,
                           );
                         },
                       );
                     },
                     child: Text(
-                      S.of(context)!.reset,
+                      S.of(context).reset,
                       style: TextStyle(fontSize: 15.0, color: Theme.of(context).colorScheme.primary,),
                     ),
                   ),
@@ -297,15 +297,15 @@ class _BagDetailPartState extends State<BagDetailPart> {
 
     // メッセージ本文（新規 / 編集で出し分け）
     final String? message =
-        isNew ? S.of(context)?.checkSentence1 : S.of(context)?.checkSentence2;
+        isNew ? S.of(context).checkSentence1 : S.of(context).checkSentence2;
     // ボタンラベル（新規 / 編集で出し分け）
     final String? continueLabel =
-        isNew ? S.of(context)?.checkSentence3 : S.of(context)?.checkSentence4;
+        isNew ? S.of(context).checkSentence3 : S.of(context).checkSentence4;
 
     showConfirmDialog(
       context: context,
       title : message ?? '',
-      okLabel: S.of(context)!.checkSentence5,
+      okLabel: S.of(context).checkSentence5,
       // → BagMaster に戻る
       cancelLabel: continueLabel ?? '',
       // → この画面に留まる

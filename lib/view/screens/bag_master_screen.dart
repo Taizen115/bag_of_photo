@@ -50,7 +50,7 @@ class _BagMasterScreenState extends State<BagMasterScreen> {
         leadingWidth: 100,
         title: Text(
           //バッグ一覧
-          S.of(context)!.bagList,
+          S.of(context).bagList,
           style: TextStyle(fontSize: 20.0, color: Colors.white70),
         ),
         centerTitle: true,
@@ -94,12 +94,12 @@ class _BagMasterScreenState extends State<BagMasterScreen> {
                     PopupMenuItem<DeleteType>(
                       value: DeleteType.Select,
                       //選択消去
-                      child: Text(S.of(context)!.deleteSelected),
+                      child: Text(S.of(context).deleteSelected),
                     ),
                     PopupMenuItem<DeleteType>(
                       value: DeleteType.All,
                       //全消去
-                      child: Text(S.of(context)!.deleteAll),
+                      child: Text(S.of(context).deleteAll),
                     ),
                   ],
                 ),
@@ -120,7 +120,7 @@ class _BagMasterScreenState extends State<BagMasterScreen> {
             onPressed: () => _goItemMasterScreen(),
             child: Text(
               //もちもの
-              S.of(context)!.item,
+              S.of(context).item,
               style: TextStyle(fontSize: 15.0, color: Colors.white70),
             ),
           ),
@@ -156,7 +156,7 @@ class _BagMasterScreenState extends State<BagMasterScreen> {
                 },
                 child: Text(
                   //バッグ作成
-                  S.of(context)!.makeBag,
+                  S.of(context).makeBag,
                   style: TextStyle(fontSize: 20.0, color: Theme.of(context).colorScheme.primary),
                 ),
               ),
@@ -186,10 +186,10 @@ class _BagMasterScreenState extends State<BagMasterScreen> {
           borderRadius: BorderRadius.circular(20.0),
         ),
         //全消去
-        title: Text(S.of(context)!.deleteAll),
+        title: Text(S.of(context).deleteAll),
         content: Text(
           //バッグを全消去しますか？
-          S.of(context)!.deleteSentence4,
+          S.of(context).deleteSentence4,
           style: TextStyle(color: Theme.of(context).colorScheme.primary),
         ),
         actions: [
@@ -201,7 +201,7 @@ class _BagMasterScreenState extends State<BagMasterScreen> {
                 borderRadius: BorderRadius.circular(20.0),
               ),
             ),
-            child: Text(S.of(context)!.cancel),
+            child: Text(S.of(context).cancel),
             onPressed: () => Navigator.pop(context),
           ),
           TextButton(
@@ -209,13 +209,13 @@ class _BagMasterScreenState extends State<BagMasterScreen> {
               backgroundColor: Theme.of(context).colorScheme.primary,
               foregroundColor: Theme.of(context).colorScheme.onPrimary,
             ),
-            child: Text(S.of(context)!.ok),
+            child: Text(S.of(context).ok),
             onPressed: () async {
               await viewModel.deleteAllBag();
               // await viewModel.getAllItem();
               Fluttertoast.showToast(
                 //バッグを全部消去しました
-                msg: S.of(context)!.deleteSentence5,
+                msg: S.of(context).deleteSentence5,
                 toastLength: Toast.LENGTH_LONG,
               );
               Navigator.pop(context);

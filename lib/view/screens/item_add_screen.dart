@@ -70,7 +70,7 @@ class _ItemAddScreenState extends State<ItemAddScreen> {
           ),
           title: Text(
             //もちもの追加
-            S.of(context)!.itemAdd,
+            S.of(context).itemAdd,
             style: TextStyle(color: Colors.white70),
           ),
         ),
@@ -104,7 +104,7 @@ class _ItemAddScreenState extends State<ItemAddScreen> {
                 style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white70),
                 //画像選択
-                child: Text(S.of(context)!.selectImage,)),
+                child: Text(S.of(context).selectImage,)),
 
               Padding(
                 padding: EdgeInsets.only(left: 8.0),
@@ -119,8 +119,8 @@ class _ItemAddScreenState extends State<ItemAddScreen> {
                     decoration: InputDecoration(
                       //もちもの名
                       //10文字まで
-                      labelText: S.of(context)?.itemName,
-                      counterText: S.of(context)?.tenWord,
+                      labelText: S.of(context).itemName,
+                      counterText: S.of(context).tenWord,
                     ),
                   ),
                 ),
@@ -132,7 +132,7 @@ class _ItemAddScreenState extends State<ItemAddScreen> {
                 // onPressed: () => _ItemAdd(context),
                 icon: Icon(Icons.add_circle_outline),
                 //もちものを登録する
-                label: S.of(context)!.addItemToList,
+                label: S.of(context).addItemToList,
                 color:Theme.of(context).colorScheme.primary,
               ),
             ],
@@ -148,7 +148,7 @@ class _ItemAddScreenState extends State<ItemAddScreen> {
       context: context,
       builder: (_) => AlertDialog(
         //画像を選択する
-        title: Text(S.of(context)!.selectImage, style: TextStyle(color: Colors.black87),),
+        title: Text(S.of(context).selectImage, style: TextStyle(color: Colors.black87),),
         actions: <Widget>[
           ButtonWithIcon(
               onPressed: () {
@@ -157,7 +157,7 @@ class _ItemAddScreenState extends State<ItemAddScreen> {
                 Navigator.pop(context);
               },
               icon: Icon(Icons.photo_camera),
-              label: S.of(context)!.camera,
+              label: S.of(context).camera,
               color: Colors.white70),
           SizedBox(height: 28.0),
           ButtonWithIcon(
@@ -167,7 +167,7 @@ class _ItemAddScreenState extends State<ItemAddScreen> {
                 Navigator.pop(context);
               },
               icon: Icon(Icons.photo),
-              label: S.of(context)!.gallery,
+              label: S.of(context).gallery,
               color: Colors.white70),
           SizedBox(
             height: 28.0,
@@ -189,7 +189,7 @@ class _ItemAddScreenState extends State<ItemAddScreen> {
     await viewModel.addItem(itemName, itemImagePath);
     Fluttertoast.showToast(
       //登録が完了しました
-      msg: S.of(context)!.finishAdd,
+      msg: S.of(context).finishAdd,
       toastLength: Toast.LENGTH_LONG,
     );
     setState(() {

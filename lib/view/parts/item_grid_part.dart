@@ -96,7 +96,7 @@ class ItemGridPart extends StatelessWidget {
                   child: Center(
                     child: Text(
                       //もちものはありません。
-                      S.of(context)!.noItem,
+                      S.of(context).noItem,
                       style: TextStyle(fontSize: 20.0),
                     ),
                   ),

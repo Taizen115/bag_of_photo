@@ -109,7 +109,7 @@ class _BagCardState extends State<BagCard> {
           borderRadius: BorderRadius.circular(20.0),
         ),
         //選択したバッグを消去しますか？
-        title: Text(S.of(context)!.deleteSentence7),
+        title: Text(S.of(context).deleteSentence7),
         actions: [
           TextButton(
             style: TextButton.styleFrom(
@@ -119,14 +119,14 @@ class _BagCardState extends State<BagCard> {
                 borderRadius: BorderRadius.circular(20.0),
               ),
             ),
-            child: Text(S.of(context)!.cancel),
+            child: Text(S.of(context).cancel),
             onPressed: () => Navigator.pop(context),
           ),
           TextButton(
             style: TextButton.styleFrom(
               foregroundColor: Colors.black87,
             ),
-            child: Text(S.of(context)!.ok),
+            child: Text(S.of(context).ok),
             onPressed: () async {
               final vm = context.read<ViewModel>();
               await vm.deleteOneBag(widget.bag);
@@ -134,7 +134,7 @@ class _BagCardState extends State<BagCard> {
               // Navigator.pop(context);
               Fluttertoast.showToast(
                 //選択消去しました
-                msg: S.of(context)!.deleteSentence6,
+                msg: S.of(context).deleteSentence6,
                 toastLength: Toast.LENGTH_LONG,
               );
             },

@@ -71,7 +71,7 @@ class _ItemEditScreenState extends State<ItemEditScreen> {
                 style: TextStyle(color: Colors.black, fontSize: 25),
               )),
           title: Text(
-            S.of(context)!.itemEdit,
+            S.of(context).itemEdit,
             style: TextStyle(color: Colors.black),
           ),
           centerTitle: true,
@@ -112,7 +112,7 @@ class _ItemEditScreenState extends State<ItemEditScreen> {
                     onPressed: () => _pickImageItem(context),
                     style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.white70),
-                    child: Text(S.of(context)!.selectImage),
+                    child: Text(S.of(context).selectImage),
                   ),
                   Padding(
                     padding: EdgeInsets.only(left: 8.0),
@@ -124,8 +124,8 @@ class _ItemEditScreenState extends State<ItemEditScreen> {
                         style: TextStyle(fontSize: 22.0),
                         controller: _textEditingController,
                         decoration: InputDecoration(
-                          labelText: S.of(context)?.itemName,
-                          counterText: S.of(context)?.tenWord,
+                          labelText: S.of(context).itemName,
+                          counterText: S.of(context).tenWord,
                         ),
                         onChanged: (_) => setState(() {}),
                       ),
@@ -137,13 +137,13 @@ class _ItemEditScreenState extends State<ItemEditScreen> {
                           ? null
                           : () => _ItemUpdate(context, _item!),
                       icon: Icon(Icons.add_circle_outline),
-                      label: S.of(context)!.itemChange,
+                      label: S.of(context).itemChange,
                       color: Colors.white70),
                   Gap(10.0),
                   ButtonWithIcon(
                       onPressed: () => _ItemDelete(context, _item!),
                       icon: Icon(Icons.delete),
-                      label: S.of(context)!.itemDelete0,
+                      label: S.of(context).itemDelete0,
                       color: Colors.white70),
                 ],
               ),
@@ -162,7 +162,7 @@ class _ItemEditScreenState extends State<ItemEditScreen> {
     showDialog(
       context: context,
       builder: (_) => AlertDialog(
-        title: Text(S.of(context)!.selectImage),
+        title: Text(S.of(context).selectImage),
         actions: <Widget>[
           ButtonWithIcon(
               onPressed: () {
@@ -171,7 +171,7 @@ class _ItemEditScreenState extends State<ItemEditScreen> {
                 Navigator.pop(context);
               },
               icon: Icon(Icons.photo_camera),
-              label: S.of(context)!.camera,
+              label: S.of(context).camera,
               color: Colors.orangeAccent),
           SizedBox(height: 28.0),
           ButtonWithIcon(
@@ -181,7 +181,7 @@ class _ItemEditScreenState extends State<ItemEditScreen> {
                 Navigator.pop(context);
               },
               icon: Icon(Icons.photo),
-              label: S.of(context)!.gallery,
+              label: S.of(context).gallery,
               color: Colors.lightBlueAccent),
         ],
       ),
@@ -210,13 +210,13 @@ class _ItemEditScreenState extends State<ItemEditScreen> {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20.0),
         ),
-        title: Text(S.of(context)!.itemDelete1),
+        title: Text(S.of(context).itemDelete1),
         actions: [
           TextButton(
             style: TextButton.styleFrom(
               foregroundColor: Colors.black87,
             ),
-            child: Text(S.of(context)!.ok),
+            child: Text(S.of(context).ok),
             onPressed: () async {
               await viewModel.deleteEditItem(item);
               await viewModel.getAllItem();
@@ -224,7 +224,7 @@ class _ItemEditScreenState extends State<ItemEditScreen> {
               Navigator.pop(context, true);
               viewModel.imageFile = null;
               Fluttertoast.showToast(
-                msg: S.of(context)!.itemDelete2,
+                msg: S.of(context).itemDelete2,
                 toastLength: Toast.LENGTH_LONG,
               );
             },
@@ -237,7 +237,7 @@ class _ItemEditScreenState extends State<ItemEditScreen> {
                 borderRadius: BorderRadius.circular(20.0),
               ),
             ),
-            child: Text(S.of(context)!.cancel),
+            child: Text(S.of(context).cancel),
             onPressed: () => Navigator.pop(context),
           )
         ],

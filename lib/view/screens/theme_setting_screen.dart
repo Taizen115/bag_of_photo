@@ -28,7 +28,7 @@ class ThemeSettingScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.primary,
         foregroundColor: Theme.of(context).colorScheme.onPrimary,
-        title: Text(S.of(context)!.selectColor),
+        title: Text(S.of(context).selectColor),
       ),
       body: GridView.count(
         crossAxisCount: 3,

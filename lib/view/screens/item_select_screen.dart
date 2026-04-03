@@ -46,7 +46,7 @@ class _ItemSelectScreenState extends State<ItemSelectScreen> {
         foregroundColor: Theme.of(context).colorScheme.onPrimary,
         title: Text(
           //もちもの選択
-          S.of(context)!.selectItem,
+          S.of(context).selectItem,
           style: TextStyle(fontSize: 25.0, color: Colors.white70),
         ),
         centerTitle: true,
@@ -61,7 +61,7 @@ class _ItemSelectScreenState extends State<ItemSelectScreen> {
           TextButton(
             onPressed: () => _goItemAddScreen(context),
             //新規追加
-            child: Text(S.of(context)!.addNew,
+            child: Text(S.of(context).addNew,
                 style: TextStyle(fontSize: 20.0, color: Colors.white70)),
           ),
         ],

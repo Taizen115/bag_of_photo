@@ -33,7 +33,7 @@ class BagDeleteScreen extends StatelessWidget {
               )),
           title: Text(
             //選択消去
-            S.of(context)!.deleteSelected,
+            S.of(context).deleteSelected,
             style: TextStyle(color: Colors.black),
           ),
           centerTitle: true,
@@ -43,7 +43,7 @@ class BagDeleteScreen extends StatelessWidget {
                   deleteBag(context);
                 },
                 //完了
-                child: Text(S.of(context)!.done))
+                child: Text(S.of(context).done))
           ],
         ),
         body: Column(
@@ -74,7 +74,7 @@ class BagDeleteScreen extends StatelessWidget {
           borderRadius: BorderRadius.circular(20.0),
         ),
         //選択したバッグを消去しますか？
-        title: Text(S.of(context)!.deleteSentence3),
+        title: Text(S.of(context).deleteSentence3),
         actions: [
           TextButton(
             style: TextButton.styleFrom(
@@ -84,14 +84,14 @@ class BagDeleteScreen extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20.0),
               ),
             ),
-            child: Text(S.of(context)!.cancel),
+            child: Text(S.of(context).cancel),
             onPressed: () => Navigator.pop(context),
           ),
           TextButton(
             style: TextButton.styleFrom(
               foregroundColor: Colors.black87,
             ),
-            child: Text(S.of(context)!.ok),
+            child: Text(S.of(context).ok),
             onPressed: () async {
               // final viewModel = context.read<ViewModel>();
               await viewModel.deleteSelectBag();
@@ -102,7 +102,7 @@ class BagDeleteScreen extends StatelessWidget {
               Navigator.pop(context, true);
               Fluttertoast.showToast(
                 //選択消去しました
-                msg: S.of(context)!.deleteSentence6,
+                msg: S.of(context).deleteSentence6,
                 toastLength: Toast.LENGTH_LONG,
               );
             },

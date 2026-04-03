@@ -71,16 +71,16 @@ dev_dependencies:
   drift_dev: ^2.19.1
   build_runner: ^2.4.11
   flutter_launcher_icons: ^0.13.1
+  intl_utils: ^2.8.0
 
 flutter_icons:
   android: true
   ios: true
-  image_path: "assets/images/bag.PNG"
+  image_path: "assets/images/photo_bag.png"
 
-  adaptive_icon_background: "#212121"
-  adaptive_icon_foreground: "assets/images/bag.PNG"
+  adaptive_icon_background: "#121212"
+  adaptive_icon_foreground: "assets/images/photo_bag.png"
 
-  intl_utils: ^2.8.0
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
