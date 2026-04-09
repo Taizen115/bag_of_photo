@@ -23,18 +23,22 @@ class BagDeleteScreen extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: Theme.of(context).colorScheme.primary,
           foregroundColor: Theme.of(context).colorScheme.onPrimary,
-          leading: TextButton(
+          leading: IconButton(
               onPressed: () {
                 Navigator.pop(context, true);
               },
-              child: Text(
-                "☓",
-                style: TextStyle(color: Colors.black, fontSize: 25),
-              )),
+              icon: const Icon(
+                Icons.close,
+              ),
+              color: Colors.white70,
+            iconSize: 30.0,
+              ),
           title: Text(
             //選択消去
             S.of(context).deleteSelected,
-            style: TextStyle(color: Colors.black),
+            style: TextStyle(
+                color: Colors.white70,
+                backgroundColor: Theme.of(context).colorScheme.primary),
           ),
           centerTitle: true,
           actions: [
@@ -43,7 +47,11 @@ class BagDeleteScreen extends StatelessWidget {
                   deleteBag(context);
                 },
                 //完了
-                child: Text(S.of(context).done))
+                child: Text(S.of(context).done,),
+            style: TextButton.styleFrom(
+              foregroundColor: Colors.white70,
+            ),
+            ),
           ],
         ),
         body: Column(
@@ -78,8 +86,8 @@ class BagDeleteScreen extends StatelessWidget {
         actions: [
           TextButton(
             style: TextButton.styleFrom(
-              foregroundColor: Colors.white,
-              backgroundColor: Colors.lightBlue,
+              foregroundColor: Colors.white70,
+              backgroundColor: Theme.of(context).colorScheme.primary,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20.0),
               ),
@@ -89,7 +97,8 @@ class BagDeleteScreen extends StatelessWidget {
           ),
           TextButton(
             style: TextButton.styleFrom(
-              foregroundColor: Colors.black87,
+              foregroundColor: Theme.of(context).colorScheme.primary,
+              backgroundColor: Colors.white70,
             ),
             child: Text(S.of(context).ok),
             onPressed: () async {

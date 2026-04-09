@@ -10,7 +10,7 @@ class ThemeProvider extends ChangeNotifier {
 
   ThemeData get themeData => ThemeData(
     colorScheme: ColorScheme.fromSeed(seedColor: _primaryColor),
-    useMaterial3: true,
+    useMaterial3: false,
   );
 
   ///アプリ起動時にSharedPreferencesから色を読む

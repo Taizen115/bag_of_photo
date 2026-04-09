@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:gap/gap.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:provider/provider.dart';
 import 'package:untitled1/main.dart';
 import 'package:untitled1/view/parts/item_grid_part.dart';
@@ -75,13 +74,13 @@ class _ItemSelectScreenState extends State<ItemSelectScreen> {
                   displayMode: ItemGridDisplayMode.SELECT,
                 ),
               ),
-              Container(
-                width: adManager.bannerAd.size.width.toDouble(),
-                height: adManager.bannerAd.size.height.toDouble(),
-                child: AdWidget(
-                  ad: adManager.bannerAd,
-                ),
-              ),
+              // Container(
+              //   width: adManager.bannerAd.size.width.toDouble(),
+              //   height: adManager.bannerAd.size.height.toDouble(),
+              //   child: AdWidget(
+              //     ad: adManager.bannerAd,
+              //   ),
+              // ),
               Gap(kToolbarHeight + 2.0)
             ],
           );

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:provider/provider.dart';
 
 import '../../generated/l10n.dart';
@@ -18,6 +17,7 @@ class _ItemDeleteScreenState extends State<ItemDeleteScreen> {
   void initState() {
     super.initState();
     final vm = context.read<ViewModel>();
+
     ///最初はチェック無し
     vm.clearSelectedItem();
 
@@ -48,28 +48,40 @@ class _ItemDeleteScreenState extends State<ItemDeleteScreen> {
       return Scaffold(
         appBar: AppBar(
           backgroundColor: Theme.of(context).colorScheme.primary,
-          foregroundColor: Theme.of(context).colorScheme.onPrimary,
-          leading: TextButton(
-              onPressed: () {
-                Navigator.pop(context, true);
-              },
-              child: Text(
-                "☓",
-                style: TextStyle(color: Colors.white70, fontSize: 25),
-              )),
+          foregroundColor: Colors.white70,
+          leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context, true);
+            },
+            icon: const Icon(
+              Icons.close,
+            ),
+            color: Colors.white70,
+            iconSize: 30.0,
+          ),
           title: Text(
             //選択消去
             S.of(context).deleteSelected,
-            style: TextStyle(color: Colors.white70),
+            style: TextStyle(color: Colors.white70, fontSize: 20.0),
           ),
           centerTitle: true,
           actions: [
             TextButton(
-                onPressed: () async {
-                  deleteItem();
-                },
-                //完了
-                child: Text(S.of(context).done, style: TextStyle(color: Colors.white70, fontSize: 20.0),))
+              style: TextButton.styleFrom(
+                foregroundColor: Colors.white70,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20.0),
+                ),
+              ),
+              onPressed: () async {
+                deleteItem();
+              },
+              //完了
+              child: Text(
+                S.of(context).done,
+                style: TextStyle(color: Colors.white70, fontSize: 20.0),
+              ),
+            ),
           ],
         ),
         body: Column(
@@ -78,21 +90,21 @@ class _ItemDeleteScreenState extends State<ItemDeleteScreen> {
               child: Container(
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  border: Border.all(color: Colors.black),
-                  color: Colors.white,
+                  border: Border.all(color: Colors.black87),
+                  color: Colors.white70,
                 ),
                 child: ItemGridPart(
                   displayMode: ItemGridDisplayMode.DELETE,
                 ),
               ),
             ),
-            Container(
-              width: adManager.bannerAd.size.width.toDouble(),
-              height: adManager.bannerAd.size.height.toDouble(),
-              child: AdWidget(
-                ad: adManager.bannerAd,
-              ),
-            ),
+            // Container(
+            //   width: adManager.bannerAd.size.width.toDouble(),
+            //   height: adManager.bannerAd.size.height.toDouble(),
+            //   child: AdWidget(
+            //     ad: adManager.bannerAd,
+            //   ),
+            // ),
           ],
         ),
       );
@@ -115,8 +127,8 @@ class _ItemDeleteScreenState extends State<ItemDeleteScreen> {
         actions: [
           TextButton(
             style: TextButton.styleFrom(
-              backgroundColor: Theme.of(context).colorScheme.primary,
-              foregroundColor: Colors.white70,
+              backgroundColor: Colors.white70,
+              foregroundColor: Theme.of(context).colorScheme.primary,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20.0),
               ),
@@ -126,13 +138,12 @@ class _ItemDeleteScreenState extends State<ItemDeleteScreen> {
           ),
           TextButton(
             style: TextButton.styleFrom(
-              foregroundColor: Colors.black87,
+              foregroundColor: Colors.white70,
+              backgroundColor: Theme.of(context).colorScheme.primary,
             ),
             child: Text(S.of(context).ok),
             onPressed: () async {
               await viewModel.deleteSelectedItem();
-              // await viewModel.deleteItem();
-              // await viewModel.getAllItem();
               Navigator.pop(context);
               Navigator.pop(context);
               Fluttertoast.showToast(

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:provider/provider.dart';
 import 'package:untitled1/view/screens/item_delete_screen.dart';
 import 'package:untitled1/view/screens/item_add_screen.dart';
@@ -112,13 +111,13 @@ class _ItemMasterScreenState extends State<ItemMasterScreen> {
                 ),
               ),
             ),
-            Container(
-              width: adManager.bannerAd.size.width.toDouble(),
-              height: adManager.bannerAd.size.height.toDouble(),
-              child: AdWidget(
-                ad: adManager.bannerAd,
-              ),
-            ),
+            // Container(
+            //   width: adManager.bannerAd.size.width.toDouble(),
+            //   height: adManager.bannerAd.size.height.toDouble(),
+            //   child: AdWidget(
+            //     ad: adManager.bannerAd,
+            //   ),
+            // ),
           ],
         ),
       );
@@ -157,8 +156,8 @@ class _ItemMasterScreenState extends State<ItemMasterScreen> {
         actions: [
           TextButton(
             style: TextButton.styleFrom(
-              foregroundColor: Colors.white,
-              backgroundColor: Colors.lightBlue,
+              foregroundColor: Colors.white70,
+              backgroundColor: Theme.of(context).colorScheme.primary,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20.0),
               ),
@@ -168,7 +167,7 @@ class _ItemMasterScreenState extends State<ItemMasterScreen> {
           ),
           TextButton(
             style: TextButton.styleFrom(
-              foregroundColor: Colors.black87,
+              foregroundColor: Theme.of(context).colorScheme.primary,
             ),
             child: Text(S.of(context).ok),
             onPressed: () async {

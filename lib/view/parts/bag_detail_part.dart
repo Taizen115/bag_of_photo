@@ -310,8 +310,8 @@ class _BagDetailPartState extends State<BagDetailPart> {
       cancelLabel: continueLabel ?? '',
       // → この画面に留まる
       okStyle: TextButton.styleFrom(
-        backgroundColor: Theme.of(context).colorScheme.primary,
-        foregroundColor: Theme.of(context).colorScheme.onPrimary,
+        backgroundColor: Colors.white70,
+        foregroundColor: Theme.of(context).colorScheme.primary,
       ),
       cancelStyle: TextButton.styleFrom(
         backgroundColor: Theme.of(context).colorScheme.primary,

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:untitled1/main.dart';
 
 import '../parts/bag_detail_part.dart';
@@ -47,13 +46,13 @@ class _BagDetailScreenState extends State<BagDetailScreen> {
                   bagId: widget.bagId,
                 ),
               ),
-              Container(
-                width: adManager.bannerAd.size.width.toDouble(),
-                height: adManager.bannerAd.size.height.toDouble(),
-                child: AdWidget(
-                  ad: adManager.bannerAd,
-                ),
-              ),
+              // Container(
+              //   width: adManager.bannerAd.size.width.toDouble(),
+              //   height: adManager.bannerAd.size.height.toDouble(),
+              //   child: AdWidget(
+              //     ad: adManager.bannerAd,
+              //   ),
+              // ),
             ],
           ),
         ),

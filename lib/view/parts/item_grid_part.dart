@@ -42,11 +42,6 @@ class ItemGridPart extends StatelessWidget {
   Widget build(BuildContext context) {
     final vm = context.watch<ViewModel>();
     List<Item> items;
-    // final items = (displayMode == ItemGridDisplayMode.UNPREPARED)
-    //     ? vm.unpreparedItems
-    //     : (displayMode == ItemGridDisplayMode.PREPARED)
-    //         ? vm.preparedItems
-    //         : vm.allItems;
     switch (displayMode) {
       case ItemGridDisplayMode.UNPREPARED:
         items = vm.unpreparedItems;

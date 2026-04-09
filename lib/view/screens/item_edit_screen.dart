@@ -3,7 +3,6 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:gap/gap.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
 
@@ -82,13 +81,13 @@ class _ItemEditScreenState extends State<ItemEditScreen> {
             return SingleChildScrollView(
               child: Column(
                 children: [
-                  Container(
-                    width: adManager.bannerAd.size.width.toDouble(),
-                    height: adManager.bannerAd.size.height.toDouble(),
-                    child: AdWidget(
-                      ad: adManager.bannerAd,
-                    ),
-                  ),
+                  // Container(
+                  //   width: adManager.bannerAd.size.width.toDouble(),
+                  //   height: adManager.bannerAd.size.height.toDouble(),
+                  //   child: AdWidget(
+                  //     ad: adManager.bannerAd,
+                  //   ),
+                  // ),
                   SizedBox(height: 20.0),
                   //持ち物の画像を表示
                   Container(

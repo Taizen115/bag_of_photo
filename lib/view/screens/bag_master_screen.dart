@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:gap/gap.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:provider/provider.dart';
 import 'package:untitled1/view/parts/bag_grid_part.dart';
 import 'package:untitled1/view/screens/bag_delete_screen.dart';
@@ -46,7 +45,7 @@ class _BagMasterScreenState extends State<BagMasterScreen> {
       backgroundColor: Colors.white70,
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.primary,
-        foregroundColor: Colors.black87,
+        foregroundColor: Colors.white70,
         leadingWidth: 100,
         title: Text(
           //バッグ一覧
@@ -126,19 +125,6 @@ class _BagMasterScreenState extends State<BagMasterScreen> {
           ),
         ),
       ),
-      // floatingActionButton: Padding(
-      //   padding: const EdgeInsets.only(bottom: 100.0),
-      //   child: TextButton(
-      //     onPressed: () {
-      //       _goBagDetailScreen(openMode: BagDetailOpenMode.NEW);
-      //     },
-      //     child: Text(
-      //       //バッグ作成
-      //       S.of(context)!.makeBag,
-      //       style: TextStyle(fontSize: 20.0, color: Colors.lightBlue),
-      //     ),
-      //   ),
-      // ),
       body: Column(
         children: [
           Expanded(
@@ -163,13 +149,13 @@ class _BagMasterScreenState extends State<BagMasterScreen> {
             ),
           ),
           //TODO　バッグ一覧
-          Container(
-            width: adManager.bannerAd.size.width.toDouble(),
-            height: adManager.bannerAd.size.height.toDouble(),
-            child: AdWidget(
-              ad: adManager.bannerAd,
-            ),
-          ),
+          // Container(
+          //   width: adManager.bannerAd.size.width.toDouble(),
+          //   height: adManager.bannerAd.size.height.toDouble(),
+          //   child: AdWidget(
+          //     ad: adManager.bannerAd,
+          //   ),
+          // ),
           Gap(kToolbarHeight + 2.0),
         ],
       ),
@@ -190,7 +176,7 @@ class _BagMasterScreenState extends State<BagMasterScreen> {
         content: Text(
           //バッグを全消去しますか？
           S.of(context).deleteSentence4,
-          style: TextStyle(color: Theme.of(context).colorScheme.primary),
+          style: TextStyle(color: Colors.black87),
         ),
         actions: [
           TextButton(
@@ -206,8 +192,8 @@ class _BagMasterScreenState extends State<BagMasterScreen> {
           ),
           TextButton(
             style: TextButton.styleFrom(
-              backgroundColor: Theme.of(context).colorScheme.primary,
-              foregroundColor: Theme.of(context).colorScheme.onPrimary,
+              backgroundColor: Colors.white70,
+              foregroundColor: Theme.of(context).colorScheme.primary,
             ),
             child: Text(S.of(context).ok),
             onPressed: () async {
