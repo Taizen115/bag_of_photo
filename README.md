@@ -1,16 +1,50 @@
-# untitled1
+# バッグの中身
 
-A new Flutter project.
+## 概要
+バッグの中に入れている持ち物を管理し、忘れ物を防ぐためのアプリです。  
+既存のアプリを引き継ぎ、機能追加や画面改善を行いました。  
+ユーザーがバッグごとに持ち物を確認しやすいように調整しています。
 
-## Getting Started
+## 制作背景
+日常生活の中で、外出前に持ち物を確認したい場面は多くあります。  
+そこで、バッグの中を確認できるアプリとして開発されたものを引き継ぎ、  
+より使いやすくなるよう改修を行いました。
 
-This project is a starting point for a Flutter application.
+## このプロジェクトで担当したこと
+本アプリは、既存コードをもとに改善・改修を行ったプロジェクトです。  
+私は主に以下を担当しました。
 
-A few resources to get you started if this is your first Flutter project:
+- 既存コードの読解
+- 画面や機能の修正
+- 複数バッグに対応する機能追加
+- デザインの調整
+- 次の担当者に引き継ぎやすいように整理しながら改修
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## 主な機能
+- バッグの登録
+- バッグごとの持ち物一覧表示
+- 持ち物の追加
+- 持ち物の編集
+- 持ち物の削除
+- 持ち物チェック機能
+- 複数バッグの管理
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 工夫した点
+- **既存設計を意識しながら改修したこと**  
+  もともとのアプリの考え方を大切にしながら、無理に作り変えるのではなく、必要な改善を積み重ねました。
+
+- **複数バッグに対応できるよう改善したこと**  
+  1つのバッグだけでなく、用途ごとに複数のバッグを管理できるように機能を拡張しました。
+
+- **引き継ぎを意識して修正したこと**  
+  自分が直すだけでなく、次の担当者が見ても分かりやすいように、コードや画面構成を意識して改修しました。
+
+## 苦労した点
+- 既存コードを理解したうえで修正する必要があり、まずMVVMの設計や画面の流れを把握することに時間がかかりました。
+- 新しい機能を追加する際に、既存機能に影響が出ないよう注意しながら修正しました。
+- すでにある設計の意図を崩さずに改善することの難しさと大切さを学びました。
+
+## 学んだこと
+この開発を通して、新規で作る力だけでなく、  
+既存のコードを読み取り、意図を理解しながら改善する力の大切さを学びました。  
+また、保守・改修では、機能追加だけでなく、次の担当者が扱いやすい形に整える視点も重要だと学びました。
